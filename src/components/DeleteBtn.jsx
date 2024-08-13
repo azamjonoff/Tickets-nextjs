@@ -7,7 +7,7 @@ import trashLogo from "@/components/trash-logo.svg";
 
 function DeleteBtn(ticket) {
   const handleDelete = () => {
-    fetch(`http://localhost:5000/tickets/${ticket.ticket}`, {
+    fetch(`https://json-api.uz/api/project/tickets-abdulloh/${ticket.ticket}`, {
       method: "DELETE",
     }).then(() => {
       alert(`${ticket.ticket} you deleted this ticket`);

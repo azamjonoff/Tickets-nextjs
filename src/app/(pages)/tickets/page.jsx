@@ -5,7 +5,7 @@ import Link from "next/link";
 import DeleteBtn from "@/components/DeleteBtn";
 
 const getData = async () => {
-  const req = await fetch("http://localhost:5000/tickets", {
+  const req = await fetch("https://json-api.uz/api/project/tickets-abdulloh", {
     next: {
       revalidate: 0,
     },

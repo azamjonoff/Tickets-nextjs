@@ -1,5 +1,7 @@
 const getData = async (id) => {
-  const req = await fetch("http://localhost:5000/tickets/" + id);
+  const req = await fetch(
+    "https://json-api.uz/api/project/tickets-abdulloh/" + id
+  );
   const data = await req.json();
 
   return { data };
