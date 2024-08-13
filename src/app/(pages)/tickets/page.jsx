@@ -5,18 +5,22 @@ import Link from "next/link";
 import DeleteBtn from "@/components/DeleteBtn";
 
 const getData = async () => {
-  const req = await fetch("https://json-api.uz/api/project/tickets-abdulloh", {
-    next: {
-      revalidate: 0,
-    },
-  });
+  const req = await fetch(
+    "https://json-api.uz/api/project/tickets-abdulloh/tickets",
+    {
+      next: {
+        revalidate: 0,
+      },
+    }
+  );
   const data = await req.json();
 
   return { data };
 };
 
 async function Tickets() {
-  const { data } = await getData();
+  const data = await getData();
+
   return (
     <div>
       <div className="flex justify-between">

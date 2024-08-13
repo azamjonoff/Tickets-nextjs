@@ -7,9 +7,12 @@ import trashLogo from "@/components/trash-logo.svg";
 
 function DeleteBtn(ticket) {
   const handleDelete = () => {
-    fetch(`https://json-api.uz/api/project/tickets-abdulloh/${ticket.ticket}`, {
-      method: "DELETE",
-    }).then(() => {
+    fetch(
+      `https://json-api.uz/api/project/tickets-abdulloh/tickets/${ticket.ticket}`,
+      {
+        method: "DELETE",
+      }
+    ).then(() => {
       alert(`${ticket.ticket} you deleted this ticket`);
       window.location.reload();
     });

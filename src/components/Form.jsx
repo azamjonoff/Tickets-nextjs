@@ -10,7 +10,7 @@ function Form() {
     const user_email = formData.get("userEmail");
     const priority = formData.get("selectedFruit");
 
-    fetch("https://json-api.uz/api/project/tickets-abdulloh", {
+    fetch("https://json-api.uz/api/project/tickets-abdulloh/tickets", {
       method: "post",
       headers: {
         "Content-type": "application/json",
