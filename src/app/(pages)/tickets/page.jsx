@@ -19,7 +19,8 @@ const getData = async () => {
 };
 
 async function Tickets() {
-  const data = await getData();
+  const { data } = await getData();
+  console.log(data.data);
 
   return (
     <div>
@@ -38,7 +39,7 @@ async function Tickets() {
         </div>
       </div>
       <ul className="mt-14">
-        {data.map((ticket) => {
+        {data.data.map((ticket) => {
           return (
             <li key={ticket.id} className="card">
               <Link href={`tickets/${ticket.id}`}>
