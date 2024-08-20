@@ -1,6 +1,9 @@
 "use client";
 
+import { useNavigate } from "react-router-dom";
+
 function Form() {
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -21,6 +24,7 @@ function Form() {
         "You have added a ticket, the list of books is one the Tickets Page"
       );
       e.target.reset();
+      navigate("/tickets");
     });
   };
 
