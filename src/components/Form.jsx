@@ -23,8 +23,8 @@ function Form() {
       alert(
         "You have added a ticket, the list of books is one the Tickets Page"
       );
-      e.target.reset();
       navigate("/tickets");
+      e.target.reset();
     });
   };
 
